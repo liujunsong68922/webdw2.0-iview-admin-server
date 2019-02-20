@@ -52,6 +52,7 @@ public class WebDWController {
 	}
 
 	@GetMapping(path = "/setdataobject")
+	@CrossOrigin(origins = "*", maxAge = 3600)	
 	public @ResponseBody WebDWControllerRet dw_f1_SetDataObject(@RequestParam String token,
 			@RequestParam String dwname) {
 		return this._SetDataObject(token, dwname);
@@ -70,6 +71,7 @@ public class WebDWController {
 	}
 
 	@GetMapping(path = "/retrieve")
+	@CrossOrigin(origins = "*", maxAge = 3600)	
 	public @ResponseBody WebDWControllerRet dw_f2_Retrieve(@RequestParam String token, @RequestParam String dwname,
 			@RequestParam String args) {
 		return this._Retrieve(token, dwname, args);
@@ -89,6 +91,7 @@ public class WebDWController {
 	}
 
 	@GetMapping(path = "/insertrow")
+	@CrossOrigin(origins = "*", maxAge = 3600)	
 	public @ResponseBody WebDWControllerRet dw_f3_InsertRow(@RequestParam String token, @RequestParam String uuid) {
 		return this._InsertRow(token, uuid);
 	}
@@ -106,6 +109,7 @@ public class WebDWController {
 	}
 
 	@GetMapping(path = "/deleterow")
+	@CrossOrigin(origins = "*", maxAge = 3600)	
 	public @ResponseBody WebDWControllerRet dw_f4_DeleteRow(@RequestParam String token, @RequestParam String uuid,
 			@RequestParam int rowid) {
 		return this._DeleteRow(token, uuid, rowid);
@@ -125,6 +129,7 @@ public class WebDWController {
 	}
 
 	@GetMapping(path = "/update")
+	@CrossOrigin(origins = "*", maxAge = 3600)	
 	public @ResponseBody WebDWControllerRet dw_f5_Update(@RequestParam String token, @RequestParam String uuid) {
 		return this._Update(token, uuid);
 	}
@@ -142,6 +147,7 @@ public class WebDWController {
 	}
 
 	@GetMapping(path = "/setitem")
+	@CrossOrigin(origins = "*", maxAge = 3600)	
 	public @ResponseBody WebDWControllerRet dw_f6_SetItem(@RequestParam String uuid, @RequestParam int rowid,
 			@RequestParam int colid, @RequestParam String data) throws Exception {
 		return this._SetItem(uuid, rowid, colid, data);
